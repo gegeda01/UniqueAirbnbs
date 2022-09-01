@@ -13,7 +13,7 @@ const Nav = styled.nav`
     z-index: 100;
     position: fixed;
     width: 100%;
-    background:#ffcc80;
+    
 `;
 
 
@@ -88,7 +88,7 @@ const Navbar = ({toggle}) => {
             ))}
         </NavMenu>
         <NavBtn>
-            <Button to='/contact' primary='true' >Contact Us</Button>
+            <Button to='/contact' primary='true' >More</Button>
         </NavBtn>
     </Nav>
   )
