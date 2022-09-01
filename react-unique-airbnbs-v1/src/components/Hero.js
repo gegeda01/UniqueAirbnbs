@@ -1,4 +1,4 @@
-import React,{useState}from 'react';
+import React,{useEffect, useState,useRef}from 'react';
 //import { FaSlideshare } from 'react-icons/fa';
 import styled,{css} from 'styled-components/macro';
 import { Button } from './Button';
@@ -128,16 +128,40 @@ const NextArrow  =styled(IoMdArrowForward)`
 const Hero = ({slides}) => {
 const[current,setCurrent] = useState(0);
 const length = slides.length;
-//const timeout = useRef(null)
+const timeout = useRef(null)
+
+useEffect(()=>{
+    const nextSlide=()=>{
+        setCurrent(current===length-1?0:current+1)
+    }
+    timeout.current=setTimeout(nextSlide,3000)
+
+    return function(){
+        if(timeout.current){
+            clearTimeout(timeout.current);
+        }
+    };
+
+},[current,length])
 
 const nextSlide =()=>{
+    if(timeout.current){
+        clearTimeout(timeout.current);
+    }
     setCurrent(current===length-1?0:current+1);
     
-}
+};
 
 const prevSlide =()=>{
+    if(timeout.current){
+        clearTimeout(timeout.current);
+    }
     setCurrent(current===0?length-1:current-1);
     
+};
+
+if(!Array.isArray(slides)|| slides.length<=0){
+    return null
 }
   return (
     <HeroSection>

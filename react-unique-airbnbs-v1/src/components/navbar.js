@@ -13,7 +13,7 @@ const Nav = styled.nav`
     z-index: 100;
     position: fixed;
     width: 100%;
-
+    background:#ffcc80;
 `;
 
 
@@ -25,6 +25,10 @@ const NavLink = css`
     height: 100%;
     cursor: pointer;
     text-decoration: none;
+    
+    &:hover{
+        color:#000d1a;
+    }
 `;
 const Logo = styled(Link)`
     font-style: italic;
@@ -55,6 +59,7 @@ const NavMenu = styled.div`
         display:none;
         
     }
+   
 `;
 
 const NavMenuLinks = styled(Link)`
@@ -70,11 +75,11 @@ const NavBtn = styled.div`
         
     }
 `
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <Nav>
         <Logo to="/">Unique Airbnbs</Logo>
-        <Menubar />
+        <Menubar onClick={toggle}/>
         <NavMenu>
             {menuData.map((item,index) => (
                 <NavMenuLinks to={item.link} key={index}>
