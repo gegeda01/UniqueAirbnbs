@@ -1,8 +1,6 @@
 import React,{useEffect, useState,useRef}from 'react';
 //import { FaSlideshare } from 'react-icons/fa';
 import styled,{css} from 'styled-components/macro';
-import { Button } from './Button';
-import {IoMdArrowRoundForward} from 'react-icons/io';
 import { IoMdArrowForward,IoMdArrowBack} from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -91,10 +89,6 @@ const HeroContent = styled.div`
   }
 `;
 
-
-const Arrow = styled(IoMdArrowRoundForward)`
-    margin-left:0.5rem;
-`;
 
 const SliderButton = styled.div`
     position:absolute;
@@ -187,11 +181,7 @@ const fadeAnimation = {
                             <HeroContent>
                                 <h1>{slide.title}</h1>
                                 <p>{slide.price}</p>
-                                <Button to={slide.path} primary='true'
-                                css={`max-width:160px;`}>
-                                    {slide.label}
-                                <Arrow/>
-                                </Button>
+                                
                             </HeroContent>
                         </HeroSlider>
                             
