@@ -85,8 +85,11 @@ const DropDown = ({isOpen,toggle}) => {
             ))}
             </DropDownMenu>
             <BtnWrap>
-                <Button primary='true' round='true' big='true' to='/contact'>
-                    Contact Us
+                <Button round='true' big='true'><a
+              href='//www.boredpanda.com/coolest-unique-best-rent-houses-airbnb/?utm_source=google&utm_medium=organic&utm_campaign=organic.com'
+              rel='noopener noreferrer'
+              target='_blank'
+            >More</a>
                 </Button>
             </BtnWrap>
         </DropDownWrapper>

@@ -59,7 +59,7 @@ const Right=styled.div`
         }
     }
 `;
-const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,image}) => {
+const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,image,redirect}) => {
   return (
     <Section>
         <Container>
@@ -70,7 +70,8 @@ const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,imag
             <h1>{heading}</h1>
             <p>{paragraphOne}</p>
             <p>{paragraphTwo}</p>
-            <Button to='/homes' primary='true'>{buttomLabel}</Button>
+            <Button ><a href= {redirect} rel='noopener noreferrer'
+              target='_blank'>{buttomLabel}</a></Button>
             </Left>
             
          </Container>

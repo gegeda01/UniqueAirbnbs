@@ -1,12 +1,11 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import styled,{css} from 'styled-components/macro';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
-//import bar from'../images/menu-bar.svg';
 import {FaBars} from 'react-icons/fa';
 const Nav = styled.nav`
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
@@ -76,8 +75,36 @@ const NavBtn = styled.div`
     }
 `
 const Navbar = ({toggle}) => {
+ const [navbar, setNavbar] = useState(false);
+  const location = useLocation();
+
+  const changeBackground = () => {
+    if (window.pageYOffset >= 60) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    const watchScroll = () => {
+      window.addEventListener('scroll', changeBackground);
+    };
+
+    watchScroll();
+
+    return () => {
+      window.removeEventListener('scroll', changeBackground);
+    };
+  }, []);
+
+  let style = {
+    backgroundColor:
+      navbar || location.pathname !== '/' ? '#CD853F' : 'transparent',
+    transition: '0.4s'
+  };
   return (
-    <Nav>
+    <Nav style={style}>
         <Logo to="/">Unique Airbnbs</Logo>
         <Menubar onClick={toggle}/>
         <NavMenu>
@@ -88,7 +115,11 @@ const Navbar = ({toggle}) => {
             ))}
         </NavMenu>
         <NavBtn>
-            <Button to='/contact' primary='true' >More</Button>
+            <Button ><a
+              href='//www.boredpanda.com/coolest-unique-best-rent-houses-airbnb/?utm_source=google&utm_medium=organic&utm_campaign=organic.com'
+              rel='noopener noreferrer'
+              target='_blank'
+            >More</a></Button>
         </NavBtn>
     </Nav>
   )

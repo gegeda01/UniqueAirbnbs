@@ -6,9 +6,10 @@ import Hero from './components/Hero';
 import { SliderData } from './data/SliderData';
 import DropDown from './components/DropDown';
 import InfoSection from './components/InfoSection';
-import InfoSection2 from './components/InfoSection2'
-import { InfoData } from './data/InfoData';
-import {InfoDataTwo} from './data/InfoData2'
+import InfoSection2 from './components/InfoSection2';
+import { InfoData,InfoDataTwo,InfoDataThree,InfoDataFour,InfoDataFive } from './data/InfoData';
+import AboutSection from './components/AboutSection';
+
 
 function App() {
   const [isOpen,setIsOpen] = useState(false)
@@ -22,8 +23,11 @@ function App() {
     <Navbar toggle={toggle} />
     <DropDown isOpen={isOpen} toggle={toggle}/>
     <Hero slides={SliderData} />
-    <InfoSection {...InfoData}/>
-    <InfoSection2 {...InfoDataTwo}/>
+    <AboutSection {...InfoDataFive} />
+    <InfoSection {...InfoData} />
+    <InfoSection2 {...InfoDataTwo} />
+    <InfoSection {...InfoDataThree}/>
+    <InfoSection2 {...InfoDataFour}/>
     </>
   );
 }
