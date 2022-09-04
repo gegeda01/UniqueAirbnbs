@@ -37,10 +37,12 @@ const AboutSection = ({heading,paragraphOne,paragraphTwo,image}) => {
   return (
     <Section>
         <Container>
-            <h1>{heading}</h1>
-            <p>{paragraphOne}</p>
-            <p>{paragraphTwo}</p>
-            <img src={image} alt="about"/>
+            <h1 data-aos='fade-down' data-aos-duration='800'>{heading}</h1>
+            <p data-aos='fade-right' data-aos-duration='800' data-aos-delay='300'>{paragraphOne}</p>
+            <p data-aos='fade-right' data-aos-duration='800' data-aos-delay='300'>{paragraphTwo}</p>
+            <img src={image} alt="about" data-aos='zoom-in'
+            data-aos-duration='1000'
+            data-aos-delay='300' />
         </Container>
     </Section>
   )

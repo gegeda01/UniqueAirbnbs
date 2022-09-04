@@ -163,7 +163,7 @@ if(!Array.isArray(slides)|| slides.length<=0){
 
 const fadeAnimation = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8 } },
+    visible: { opacity: 1, transition: { duration: 1.5 } },
     exit: { opacity: 0 }
 };
 
@@ -179,8 +179,8 @@ const fadeAnimation = {
                             <HeroImage src={slide.image} alt={slide.alt} initial='hidden' animate='visible' exit='exit'
                       variants={fadeAnimation}/>
                             <HeroContent>
-                                <h1>{slide.title}</h1>
-                                <p>{slide.price}</p>
+                                <h1 data-aos='fade-right' data-aos-duration='800'>{slide.title}</h1>
+                                <p data-aos='fade-right' data-aos-duration='800' data-aos-delay='300'>{slide.price}</p>
                                 
                             </HeroContent>
                         </HeroSlider>

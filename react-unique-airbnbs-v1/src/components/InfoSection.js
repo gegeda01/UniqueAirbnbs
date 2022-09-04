@@ -62,7 +62,10 @@ const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,imag
   return (
     <Section>
         <Container>
-            <Left>
+            <Left data-aos='zoom-in'
+            data-aos-duration='1000'
+            data-aos-delay={delay}
+            data-aos-anchor-placement='center bottom'>
             <h1>{heading}</h1>
             <p>{paragraphOne}</p>
             <p>{paragraphTwo}</p>
@@ -72,7 +75,6 @@ const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,imag
             <Right reverse={reverse}>
                 <img src={image} alt="homes" data-aos='zoom-out'
             data-aos-duration='1000'
-            data-aos-once='true'
             data-aos-delay={delay}
             data-aos-anchor-placement='center bottom'/>
             </Right>

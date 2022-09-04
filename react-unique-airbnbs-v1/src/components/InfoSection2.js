@@ -59,14 +59,20 @@ const Right=styled.div`
         }
     }
 `;
-const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,image,redirect}) => {
+const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,image,redirect,delay}) => {
   return (
     <Section>
         <Container>
             <Right reverse={reverse}>
-                <img src={image} alt="homes"/>
+                <img src={image}alt="homes" data-aos='flip-right'
+            data-aos-duration='1000'
+            data-aos-delay={delay}
+            data-aos-anchor-placement='center bottom'/>
             </Right>
-            <Left>
+            <Left data-aos='flip-left'
+            data-aos-duration='1000'
+            data-aos-delay={delay}
+            data-aos-anchor-placement='center bottom'>
             <h1>{heading}</h1>
             <p>{paragraphOne}</p>
             <p>{paragraphTwo}</p>
