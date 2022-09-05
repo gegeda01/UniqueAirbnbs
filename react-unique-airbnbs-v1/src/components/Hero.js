@@ -1,5 +1,4 @@
 import React,{useEffect, useState,useRef}from 'react';
-//import { FaSlideshare } from 'react-icons/fa';
 import styled,{css} from 'styled-components/macro';
 import { IoMdArrowForward,IoMdArrowBack} from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';

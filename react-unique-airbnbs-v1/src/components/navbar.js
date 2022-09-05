@@ -43,7 +43,8 @@ const Menubar = styled(FaBars)`
         width:40px;
         cursor:pointer;
         position:absolute;
-        top:15px;
+        color:white;
+        top:7px;
         right:70px;
         transform:translate(-50%,25%);
     }
@@ -100,7 +101,7 @@ const Navbar = ({toggle}) => {
 
   let style = {
     backgroundColor:
-      navbar || location.pathname !== '/' ? '#CD853F' : 'transparent',
+      navbar || location.pathname !== '/' ? '#00cc00' : 'transparent',
     transition: '0.4s'
   };
   return (
@@ -115,7 +116,7 @@ const Navbar = ({toggle}) => {
             ))}
         </NavMenu>
         <NavBtn>
-            <Button ><a
+            <Button round="true" primarycolor="true"><a
               href='//www.boredpanda.com/coolest-unique-best-rent-houses-airbnb/?utm_source=google&utm_medium=organic&utm_campaign=organic.com'
               rel='noopener noreferrer'
               target='_blank'

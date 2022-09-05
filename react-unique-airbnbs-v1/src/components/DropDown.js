@@ -9,7 +9,7 @@ const DropDownContainer = styled.div`
     z-index:999;
     width:100%;
     height:100%;
-    background:#cd853f;
+    background:#00cc00;
     display:grid;
     align-items:center;
     top:0;
@@ -40,12 +40,12 @@ const DropDownWrapper=styled.div`
 const DropDownMenu=styled.div`
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:repeat(4,80px);
+    grid-template-rows:repeat(4,60px);
     text-align:center;
     margin-bottom:4rem;
 
     @media screen and (max-width:480px){
-        grid-template-row: repeat(4,60px);
+        grid-template-row: repeat(4,40px);
     }
 
 `;
@@ -85,7 +85,7 @@ const DropDown = ({isOpen,toggle}) => {
             ))}
             </DropDownMenu>
             <BtnWrap>
-                <Button round='true' big='true'><a
+                <Button round='true' big='true' primarycolor="true"><a
               href='//www.boredpanda.com/coolest-unique-best-rent-houses-airbnb/?utm_source=google&utm_medium=organic&utm_campaign=organic.com'
               rel='noopener noreferrer'
               target='_blank'

@@ -69,7 +69,7 @@ const InfoSection = ({heading,paragraphOne,paragraphTwo,buttomLabel,reverse,imag
             <h1>{heading}</h1>
             <p>{paragraphOne}</p>
             <p>{paragraphTwo}</p>
-            <Button ><a href= {redirect} rel='noopener noreferrer'
+            <Button round="true" primarycolor="true"><a href= {redirect} rel='noopener noreferrer'
               target='_blank'>{buttomLabel}</a></Button>
             </Left>
             <Right reverse={reverse}>
