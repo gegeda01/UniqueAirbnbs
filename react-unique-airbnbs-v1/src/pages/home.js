@@ -5,6 +5,7 @@ import InfoSection from '../components/InfoSection';
 import InfoSection2 from '../components/InfoSection2';
 import { InfoData,InfoDataTwo,InfoDataThree,InfoDataFour,InfoDataFive } from '../data/InfoData';
 import AboutSection from '../components/AboutSection';
+import ContactSection from '../components/ContactSection';
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
     <InfoSection {...InfoData} />
     <InfoSection2 {...InfoDataTwo} />
     <InfoSection {...InfoDataThree}/>
-    <InfoSection2 {...InfoDataFour}/></>
+    <InfoSection2 {...InfoDataFour}/>
+    <ContactSection /></>
+    
     
   )
 }

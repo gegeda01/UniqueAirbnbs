@@ -9,6 +9,7 @@ import About from './pages/about';
 import Info from './pages/Info';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import Contact from './pages/contact';
 
 function App() {
   const [isOpen,setIsOpen] = useState(false)
@@ -30,6 +31,7 @@ function App() {
       <Route  path='/' element={<Home/>} ></Route>
       <Route  path='/about' element={<About/>} ></Route>
       <Route  path='/homes' element={<Info/>} ></Route>
+      <Route path='/contact' element={<Contact/>}></Route>
     </Routes>
     
     </>
