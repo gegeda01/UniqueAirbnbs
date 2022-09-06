@@ -41,12 +41,12 @@ const Form=styled.div`
     
     `
 function ContactSection({round,primarycolor,onClick}){
-    return(<Container primarycolor={primarycolor}>
+    return(<Container primarycolor={primarycolor} data-testid="container">
         <Form>
         <h1>Contact Us</h1>
-          <input type="text" name="Name" placeholder="Name" round={round} data-testid="name"required />
+          <input type="text" name="Name" placeholder="Name" round={round} data-testid="name" label="Name" required />
           <input type="email" name="Email" placeholder="Email"  round={round} data-testid="email" required/>
-          <textarea name="Message" placeholder="Please type your message here" required round={round}></textarea>
+          <textarea name="Message" placeholder="Please type your message here"  data-testid="message" required round={round}></textarea>
           <Btn primarycolor='false' round='true' label="Submit" onClick={onClick}></Btn>
         </Form>
         </Container>)

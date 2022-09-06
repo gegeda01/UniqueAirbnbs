@@ -1,5 +1,6 @@
 import ContactSection from "../components/ContactSection"
-import {within,userEvent,waitFor} from '@testing-library/dom'
+import {within,userEvent,waitFor,screen} from '@testing-library/dom'
+
 const ContactForm={
     component:ContactSection,
     argTypes: { onClick: { action: 'clicked' } },
@@ -17,10 +18,10 @@ FirstForm.args = {
 
 export const SecondForm = Template.bind({})
 
-SecondForm.play = async (context,args) => {
-    const canvas =within(context.canvasElement)
+SecondForm.play = async () => {
+    const typeInput = screen.getByTestId("name")
 
-    await userEvent.type(canvas.getByTestId('email'), 'hi@example.com');
+    await userEvent.type(typeInput,"Kathy",{delay:100});
 
-    await waitFor(() => expect(args.onClick).toHaveBeenCalled)
+
 }

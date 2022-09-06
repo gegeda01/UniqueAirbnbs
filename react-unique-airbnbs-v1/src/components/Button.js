@@ -25,7 +25,7 @@ export const Button = styled.div`
 `
 
 function Btn({big,round,label,primarycolor,onClick}){
-    return (<Button big={big} round={round} primarycolor={primarycolor} onClick={onClick}>{label}</Button>)
+    return (<Button big={big} round={round} primarycolor={primarycolor} onClick={onClick} data-testid="button">{label}</Button>)
 }
 Btn.propTypes ={
     big:PropTypes.bool,
